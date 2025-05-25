@@ -1,23 +1,41 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies and build artifacts
 /node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
+/dist
 /build
 
-# misc
-.DS_Store
+# Environment variables (CRITICAL for sensitive data)
+.env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
+.env.*
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+
+# IDE specific files (e.g., VS Code)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+.localized
+
+# Common temporary files
+*.tmp
+*.swp
+*.swo
+
+# Firebase related files (if you have local config files not meant for Git)
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc # Use with caution, if this contains sensitive project IDs
